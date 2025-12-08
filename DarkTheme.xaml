@@ -1,0 +1,118 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Core colors -->
+    <Color x:Key="EnixBackgroundColor">#121212</Color>
+    <Color x:Key="EnixSurfaceColor">#1E1E1E</Color>
+    <Color x:Key="EnixSurfaceAltColor">#252525</Color>
+    <Color x:Key="EnixBorderColor">#333333</Color>
+    <Color x:Key="EnixForegroundColor">#FFFFFFFF</Color>
+    <Color x:Key="EnixForegroundMutedColor">#B3FFFFFF</Color>
+    <Color x:Key="EnixAccentColor">#FF4FC3F7</Color>
+    <Color x:Key="EnixAccentDarkColor">#FF0288D1</Color>
+    <Color x:Key="EnixErrorColor">#FFEF5350</Color>
+
+    <SolidColorBrush x:Key="EnixBackgroundBrush"
+                      Color="{StaticResource EnixBackgroundColor}" />
+    <SolidColorBrush x:Key="EnixSurfaceBrush"
+                      Color="{StaticResource EnixSurfaceColor}" />
+    <SolidColorBrush x:Key="EnixSurfaceAltBrush"
+                      Color="{StaticResource EnixSurfaceAltColor}" />
+    <SolidColorBrush x:Key="EnixBorderBrush"
+                      Color="{StaticResource EnixBorderColor}" />
+    <SolidColorBrush x:Key="EnixForegroundBrush"
+                      Color="{StaticResource EnixForegroundColor}" />
+    <SolidColorBrush x:Key="EnixForegroundMutedBrush"
+                      Color="{StaticResource EnixForegroundMutedColor}" />
+    <SolidColorBrush x:Key="EnixAccentBrush"
+                      Color="{StaticResource EnixAccentColor}" />
+    <SolidColorBrush x:Key="EnixAccentDarkBrush"
+                      Color="{StaticResource EnixAccentDarkColor}" />
+    <SolidColorBrush x:Key="EnixErrorBrush"
+                      Color="{StaticResource EnixErrorColor}" />
+
+    <!-- Global window styling -->
+    <Style TargetType="Window">
+        <Setter Property="Background" Value="{StaticResource EnixBackgroundBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource EnixForegroundBrush}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="13" />
+    </Style>
+
+    <!-- Buttons (nav, history, bookmarks) -->
+    <Style TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource EnixSurfaceAltBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource EnixForegroundBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource EnixBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="6,2" />
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="3"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border"
+                                    Property="Background"
+                                    Value="{StaticResource EnixAccentDarkBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border"
+                                    Property="Background"
+                                    Value="{StaticResource EnixAccentBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border"
+                                    Property="Background"
+                                    Value="{StaticResource EnixSurfaceBrush}" />
+                            <Setter Property="Foreground"
+                                    Value="{StaticResource EnixForegroundMutedBrush}" />
+                            <Setter Property="BorderBrush"
+                                    Value="{StaticResource EnixBorderBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- TextBox (address bar) -->
+    <Style TargetType="TextBox">
+        <Setter Property="Background" Value="{StaticResource EnixSurfaceBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource EnixForegroundBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource EnixBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="4,2" />
+        <Setter Property="SelectionBrush" Value="{StaticResource EnixAccentBrush}" />
+        <Setter Property="CaretBrush" Value="{StaticResource EnixForegroundBrush}" />
+    </Style>
+
+    <!-- Status bar -->
+    <Style TargetType="StatusBar">
+        <Setter Property="Background" Value="{StaticResource EnixSurfaceBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource EnixForegroundMutedBrush}" />
+    </Style>
+
+    <!-- ScrollViewer / list-like surfaces -->
+    <Style TargetType="ScrollViewer">
+        <Setter Property="Background" Value="{StaticResource EnixSurfaceBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource EnixForegroundBrush}" />
+    </Style>
+
+    <Style TargetType="ItemsControl">
+        <Setter Property="Foreground" Value="{StaticResource EnixForegroundBrush}" />
+    </Style>
+
+</ResourceDictionary>
