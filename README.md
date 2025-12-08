@@ -3,7 +3,7 @@ Enix browser. For a certain vibecoder (Vibecoder who cant live without ChatGPT s
 
 # FUCKING COMPILE THIS SHIT
 
-First. Get .NET 8.0 SDK
+First. Get .NET 8.0 SDK. THEN WEBVIEW 2!!! YOU ARE A BITCH IF YOU COMPLAIN (webview 2 link https://developer.microsoft.com/en-us/microsoft-edge/webview2) Microsoft SPYWARE GOOD 
 
 Then its easy. download source, extract it. go to the folder where extracted. dotnet build, then dotnet run. SIMPLE! YOU HAVE IT!
 
