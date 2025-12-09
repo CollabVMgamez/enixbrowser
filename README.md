@@ -15,3 +15,11 @@ if you hate it? it sucks? FUCK YOU. But ok i know it looks ass. Open in VS Code 
 # FUCKING MODIFY THE CODE
 
 just do it idk 
+
+# FUCKING TROUBLESHOOTING
+
+DOWNLOAD WEBVIEW 2 IF IT COMPLAINS ABOUT IT
+
+Also i added a bin folder which DOESNT contain the EXE but only contains the funny stuff needed
+
+
