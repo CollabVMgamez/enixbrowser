@@ -22,4 +22,6 @@ DOWNLOAD WEBVIEW 2 IF IT COMPLAINS ABOUT IT
 
 Also i added a bin folder which DOESNT contain the EXE but only contains the funny stuff needed
 
+also please delete the 8 files that arent needed
+
 
